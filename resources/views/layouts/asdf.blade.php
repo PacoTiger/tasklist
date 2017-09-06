@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">}
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 </head>
 
 <body>
-<div class="container">
+<div class="container" id="wrap">
     <nav class="navbar navbar-default">
-        <!-- Navbar Contents -->
+        <h1 class="text-center">Manager Task List</h1>
     </nav>
 </div>
 
@@ -26,5 +26,16 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<footer id="footer">
+    <div class="container">
+
+
+        <p class="text-muted credit">Example courtesy <a href="https://www.linkedin.com/in/pacotiger/en/">Francisco Padilla</a></p>
+
+
+
+    </div>
+</footer>
 </body>
 </html>

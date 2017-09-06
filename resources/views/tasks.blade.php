@@ -6,7 +6,10 @@
 
     <!-- Bootstrap Boilerplate... -->
 
-    <div class="panel-body">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="panel-body">
         <!-- Display Validation Errors -->
     @include('common.errors')
 
@@ -16,10 +19,23 @@
 
         <!-- Task Name -->
             <div class="form-group">
-                <label for="task" class="col-sm-3 control-label">Task</label>
+                <label for="task" class="col-sm-3 control-label">New Task</label>
 
                 <div class="col-sm-6">
                     <input type="text" name="name" id="task-name" class="form-control">
+                </div>
+            </div>
+        <!-- Categories input -->
+            <div class="form-group">
+                <label for="task" class="col-sm-3 control-label">Categories</label>
+
+                <div class="col-sm-6">
+                    <select type="text" name="categories" id="categories" class="form-control">
+                        <option>Urgent</option>
+                        <option>Relax</option>
+                        <option>Hard</option>
+                        <option>Other</option>
+                    </select>
                 </div>
             </div>
 
@@ -34,7 +50,7 @@
         </form>
     </div>
 
-    @if (count($tasks) > 0)
+            @if (count($tasks) > 0)
         <div class="panel panel-default">
             <div class="panel-heading">
                 Current Tasks
@@ -54,7 +70,8 @@
                     @foreach ($tasks as $task)
                         <tr>
                             <!-- Task Name -->
-                            <td class="table-text">
+                            <td class="table-text" style="width: 100%">
+                                <span class="btn btn-primary btn-xs">{{ $task->categories }} </span>
                                 <div>{{ $task->name }}</div>
                             </td>
 
@@ -79,4 +96,6 @@
             </div>
         </div>
     @endif
+        </div>
+    </div>
 @endsection

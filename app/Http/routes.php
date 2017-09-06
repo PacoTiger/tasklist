@@ -35,6 +35,7 @@ Route::post('/task', function (Request $request) {
 
     $task = new Task;
     $task->name = $request->name;
+    $task->categories = $request->categories;
     $task->save();
 
     return redirect('/');
